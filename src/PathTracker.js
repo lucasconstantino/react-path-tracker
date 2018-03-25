@@ -1,16 +1,7 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
 
-export const CONTEXT_NAME = '__traveledPath'
-
-export const contextTypes = {
-  [CONTEXT_NAME]: PropTypes.arrayOf(
-    PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.string
-    ])
-  )
-}
+import { contextTypes, CONTEXT_NAME } from './utils'
 
 /**
  * Registers a path to the traveled path.
