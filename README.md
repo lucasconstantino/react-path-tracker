@@ -1,6 +1,6 @@
 # React Path Tracker
 
-Easily track traveled paths on highly dynamic or recursive React trees.
+> :paw_prints: Easily track traveled paths on highly dynamic or recursive React trees.
 
 [![Build status](https://travis-ci.org/lucasconstantino/react-path-tracker.svg?branch=master)](https://travis-ci.org/lucasconstantino/react-path-tracker)
 
