@@ -12,7 +12,7 @@ npm install react-path-tracker
 
 ## Motivation
 
-I was once working on a layout builder for React which had some recursive needs; we had rows, which could have items, which could have rows of their own, and thus items of their own. Rendering was no big deal, but having the editing capability on this recursive tree was tricky. On each item, it was important to record what exactly was the path traveled to reach it, so that I could perform alterations such as dragging the item to a new location or resizing it. That why we created PathTracker with an easy render prop API and no logic attached, so to make it easy to use regardless on what components are making the recursion happen.
+I was once working on a layout builder for React which had some recursive needs; we had rows, which could have items, which could have rows of their own, and thus items of their own. Rendering was no big deal, but having the editing capability on this recursive tree was tricky. On each item, it was important to record what exactly was the path traveled to reach it, so that we could perform alterations such as dragging the item to a new location or resizing it. Thats why we created PathTracker, a lib with a render prop API pattern and no logic attached, so to make it easy to use regardless on what components are making the recursion happen.
 
 ## How does it work
 
