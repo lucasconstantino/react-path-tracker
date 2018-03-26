@@ -1,6 +1,6 @@
 {
   "name": "react-path-tracker",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Easily track traveled paths on highly dynamic or recursive React trees.",
   "main": "lib/index.js",
   "directories": {
