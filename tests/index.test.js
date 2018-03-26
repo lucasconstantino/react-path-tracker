@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import { PathTracker, PathConsumer } from 'react-path-tracker'
+import { PathTracker, PathConsumer, withPath } from 'react-path-tracker'
 
 describe('index', () => {
   const DumbComponent = jest.fn(() => (<div>content</div>))
@@ -96,5 +96,19 @@ describe('index', () => {
     )
 
     expect(DumbComponent).toHaveBeenCalledWith([1, 2, 3, 4, 5, 6])
+  })
+
+  describe('withPath', () => {
+    it('should inject path property', () => {
+      const EnhancedDumbComponent = withPath(DumbComponent)
+
+      mount(
+        <PathTracker path={ [1, 2, 3] }>
+          <EnhancedDumbComponent />
+        </PathTracker>
+      )
+
+      expect(DumbComponent).toHaveBeenCalledWith({ path: [1, 2, 3] }, {})
+    })
   })
 })

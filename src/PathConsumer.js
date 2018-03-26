@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import { contextTypes, CONTEXT_NAME } from './utils'
@@ -21,3 +21,12 @@ export class PathConsumer extends Component {
     return this.props.children(this.context[CONTEXT_NAME] || [])
   }
 }
+
+/**
+ * Higher-Order Component version of PathConsumer.
+ */
+export const withPath = ComposedComponent => props => (
+  <PathConsumer>
+    { path => <ComposedComponent { ...props } path={ path } /> }
+  </PathConsumer>
+)
